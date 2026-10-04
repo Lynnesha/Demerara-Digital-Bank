@@ -1,0 +1,11 @@
+<?php
+// Public financial calculator page: JavaScript performs the interactive investment-growth calculation in the browser.
+$pageTitle = 'Investment Growth Calculator';
+require_once __DIR__ . '/includes/header.php';
+?>
+<section class="calculator-layout">
+    <div class="calculator-intro"><p class="eyebrow">Financial tool</p><h1>Small, regular choices can add up.</h1><p>Use this investment growth calculator to explore a hypothetical future balance. Figures are estimates only and do not predict investment results.</p><div class="formula-note"><strong>How it works</strong><p>The estimate uses monthly compounding, your starting amount, recurring contribution and an annual return assumption.</p></div></div>
+    <section class="calculator-card" aria-labelledby="calculator-title"><h2 id="calculator-title">Investment Growth Calculator</h2><form id="investment-calculator" novalidate><div class="form-grid"><label>Initial investment<input name="initial" type="number" min="0" step="0.01" value="1000" required><span class="input-prefix">$</span></label><label>Monthly contribution<input name="monthly" type="number" min="0" step="0.01" value="250" required><span class="input-prefix">$</span></label><label>Expected annual return<input name="return" type="number" min="0" max="30" step="0.1" value="6" required><span class="input-suffix">%</span></label><label>Investment period<input name="years" type="number" min="1" max="60" step="1" value="10" required><span class="input-suffix">years</span></label></div><button class="button" type="submit">Calculate estimate</button><p id="calculator-error" class="field-error" aria-live="polite"></p></form><div id="calculator-results" class="calculator-results" aria-live="polite"><div><span>Amount contributed</span><strong id="contributed-result">$31,000.00</strong></div><div><span>Estimated investment growth</span><strong id="growth-result">$10,307.39</strong></div><div class="result-total"><span>Estimated final balance</span><strong id="final-result">$41,307.39</strong></div></div></section>
+</section>
+<section class="disclaimer"><strong>Illustrative only.</strong> The calculator uses user-entered assumptions and fictional values; it does not account for fees, taxes, changes in return or investment risk.</section>
+<?php require __DIR__ . '/includes/footer.php'; ?>

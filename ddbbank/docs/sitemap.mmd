@@ -1,0 +1,17 @@
+graph TD
+  Home[Home] --> Personal[Personal Banking]
+  Home --> Business[Business Banking]
+  Home --> Investments[Investments]
+  Home --> Calculator[Investment Calculator]
+  Home --> Register[Register]
+  Home --> Login[Login]
+  Register --> Login
+  Login --> Dashboard
+  Dashboard --> Accounts
+  Dashboard --> Transactions
+  Dashboard --> Statements
+  Dashboard --> Transfer
+  Dashboard --> Portfolio[Investments Dashboard]
+  Dashboard --> Profile[Profile & Settings]
+  Profile --> Logout
+  Logout --> Home

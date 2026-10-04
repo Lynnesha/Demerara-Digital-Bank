@@ -1,0 +1,3614 @@
+{
+  "title": "DDB Automated Accessibility Scan",
+  "timestamp": "2026-10-04T20:48:55.086Z",
+  "baseUrl": "http://127.0.0.1:3000",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "best-practice"
+  ],
+  "results": [
+    {
+      "group": "Public",
+      "pageName": "Home",
+      "route": "index.php",
+      "url": "http://127.0.0.1:3000/index.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "description": "Ensure ARIA attributes are not prohibited for an element's role",
+          "help": "Elements must only use permitted ARIA attributes",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
+          "tags": [
+            "cat.aria",
+            "wcag2a",
+            "wcag412",
+            "EN-301-549",
+            "EN-9.4.1.2",
+            "RGAAv4",
+            "RGAA-7.1.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".hero-visual"
+              ],
+              "html": "<div class=\"hero-visual\" aria-label=\"Illustration of a fictional DDB account balance\">",
+              "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute.",
+              "any": [],
+              "all": [],
+              "none": [
+                {
+                  "id": "aria-prohibited-attr",
+                  "data": {
+                    "role": null,
+                    "nodeName": "div",
+                    "messageKey": "noRoleSingular",
+                    "prohibited": [
+                      "aria-label"
+                    ]
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "aria-label attribute is not well supported on a div with no valid role attribute."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".hero-content > .eyebrow"
+              ],
+              "html": "<p class=\"eyebrow\">Demerara Digital Bank</p>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.4pt (11.2px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"hero-section\">",
+                      "target": [
+                        ".hero-section"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "h1"
+              ],
+              "html": "<h1>Bank. Invest.<br><em>Build Your Future.</em></h1>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "62.6pt (83.52px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"hero-section\">",
+                      "target": [
+                        ".hero-section"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "em"
+              ],
+              "html": "<em>Build Your Future.</em>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "62.6pt (83.52px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"hero-section\">",
+                      "target": [
+                        ".hero-section"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".hero-copy"
+              ],
+              "html": "<p class=\"hero-copy\">A more confident way to manage everyday money, invest with intent and shape the life you want — all in one clear digital experience.</p>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "13.2pt (17.6px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"hero-section\">",
+                      "target": [
+                        ".hero-section"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".button-row > .button[href$=\"register.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".button-outline"
+              ],
+              "html": "<a class=\"button button-outline\" href=\"personal-banking.php\">Explore banking</a>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"hero-section\">",
+                      "target": [
+                        ".hero-section"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".trust-line"
+              ],
+              "html": "<div class=\"trust-line\"><span class=\"trust-dot\" aria-hidden=\"true\"></span> Built for clarity. Secured for your journey.</div>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "10.2pt (13.6px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"hero-section\">",
+                      "target": [
+                        ".hero-section"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".card-top > span:nth-child(1)"
+              ],
+              "html": "<span>DDB / CHEQUING</span>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "7.9pt (10.56px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"debit-card\">\n            <div class=\"card-top\"><span>DDB / CHEQUING</span><span>•••</span></div>\n            <div class=\"card-chip\"></div>\n            <p class=\"card-balance\">$8,420.75</p>\n            <div class=\"card-bottom\"><span>DEMO MEMBER</span><span>4823</span></div>\n        </div>",
+                      "target": [
+                        ".debit-card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".card-balance"
+              ],
+              "html": "<p class=\"card-balance\">$8,420.75</p>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "24.0pt (32px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"debit-card\">\n            <div class=\"card-top\"><span>DDB / CHEQUING</span><span>•••</span></div>\n            <div class=\"card-chip\"></div>\n            <p class=\"card-balance\">$8,420.75</p>\n            <div class=\"card-bottom\"><span>DEMO MEMBER</span><span>4823</span></div>\n        </div>",
+                      "target": [
+                        ".debit-card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".card-bottom > span:nth-child(1)"
+              ],
+              "html": "<span>DEMO MEMBER</span>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "7.9pt (10.56px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"debit-card\">\n            <div class=\"card-top\"><span>DDB / CHEQUING</span><span>•••</span></div>\n            <div class=\"card-chip\"></div>\n            <p class=\"card-balance\">$8,420.75</p>\n            <div class=\"card-bottom\"><span>DEMO MEMBER</span><span>4823</span></div>\n        </div>",
+                      "target": [
+                        ".debit-card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".card-bottom > span:nth-child(2)"
+              ],
+              "html": "<span>4823</span>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "7.9pt (10.56px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"debit-card\">\n            <div class=\"card-top\"><span>DDB / CHEQUING</span><span>•••</span></div>\n            <div class=\"card-chip\"></div>\n            <p class=\"card-balance\">$8,420.75</p>\n            <div class=\"card-bottom\"><span>DEMO MEMBER</span><span>4823</span></div>\n        </div>",
+                      "target": [
+                        ".debit-card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".shield"
+              ],
+              "html": "<span class=\"shield\" aria-hidden=\"true\">✓</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "div:nth-child(2) > .feature-icon"
+              ],
+              "html": "<span class=\"feature-icon\">◇</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "div:nth-child(3) > .feature-icon"
+              ],
+              "html": "<span class=\"feature-icon\">⌁</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".inline-link[href$=\"personal-banking.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".personal-panel > a[href$=\"personal-banking.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "a[href$=\"business.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "a[href$=\"investments.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "a[href$=\"calculator.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".security-symbol"
+              ],
+              "html": "<div class=\"security-symbol\" aria-hidden=\"true\">⌾</div>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "#about > .button[href$=\"register.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 29,
+      "inapplicable": 60,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:19.730Z"
+    },
+    {
+      "group": "Public",
+      "pageName": "Personal Banking",
+      "route": "personal-banking.php",
+      "url": "http://127.0.0.1:3000/personal-banking.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 31,
+      "inapplicable": 58,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:20.931Z"
+    },
+    {
+      "group": "Public",
+      "pageName": "Business Banking",
+      "route": "business.php",
+      "url": "http://127.0.0.1:3000/business.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 29,
+      "inapplicable": 60,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:21.986Z"
+    },
+    {
+      "group": "Public",
+      "pageName": "Investments",
+      "route": "investments.php",
+      "url": "http://127.0.0.1:3000/investments.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                "article:nth-child(2) > .round-icon"
+              ],
+              "html": "<span class=\"round-icon\">≋</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .round-icon"
+              ],
+              "html": "<span class=\"round-icon\">◒</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 29,
+      "inapplicable": 60,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:23.146Z"
+    },
+    {
+      "group": "Public",
+      "pageName": "Investment Calculator",
+      "route": "calculator.php",
+      "url": "http://127.0.0.1:3000/calculator.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 34,
+      "inapplicable": 55,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:24.263Z"
+    },
+    {
+      "group": "Public",
+      "pageName": "Registration",
+      "route": "register.php",
+      "url": "http://127.0.0.1:3000/register.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "impact": "critical",
+          "description": "Ensure all ARIA attributes have valid values",
+          "help": "ARIA attributes must conform to valid values",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
+          "tags": [
+            "cat.aria",
+            "wcag2a",
+            "wcag412",
+            "EN-301-549",
+            "EN-9.4.1.2",
+            "RGAAv4",
+            "RGAA-7.1.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                "#first_name"
+              ],
+              "html": "<input id=\"first_name\" name=\"first_name\" autocomplete=\"given-name\" value=\"\" required=\"\" aria-describedby=\"first_name-error\">",
+              "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-describedby=\"first_name-error\"",
+              "any": [],
+              "all": [
+                {
+                  "id": "aria-valid-attr-value",
+                  "data": {
+                    "messageKey": "noId",
+                    "needsReview": "aria-describedby=\"first_name-error\""
+                  },
+                  "relatedNodes": [],
+                  "impact": "critical",
+                  "message": "ARIA attribute element ID does not exist on the page: aria-describedby=\"first_name-error\""
+                }
+              ],
+              "none": []
+            },
+            {
+              "target": [
+                "#last_name"
+              ],
+              "html": "<input id=\"last_name\" name=\"last_name\" autocomplete=\"family-name\" value=\"\" required=\"\" aria-describedby=\"last_name-error\">",
+              "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-describedby=\"last_name-error\"",
+              "any": [],
+              "all": [
+                {
+                  "id": "aria-valid-attr-value",
+                  "data": {
+                    "messageKey": "noId",
+                    "needsReview": "aria-describedby=\"last_name-error\""
+                  },
+                  "relatedNodes": [],
+                  "impact": "critical",
+                  "message": "ARIA attribute element ID does not exist on the page: aria-describedby=\"last_name-error\""
+                }
+              ],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 39,
+      "inapplicable": 50,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:25.456Z"
+    },
+    {
+      "group": "Public",
+      "pageName": "Login",
+      "route": "login.php",
+      "url": "http://127.0.0.1:3000/login.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 35,
+      "inapplicable": 54,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:26.540Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Dashboard",
+      "route": "dashboard.php",
+      "url": "http://127.0.0.1:3000/dashboard.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "description": "Ensure ARIA attributes are not prohibited for an element's role",
+          "help": "Elements must only use permitted ARIA attributes",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
+          "tags": [
+            "cat.aria",
+            "wcag2a",
+            "wcag412",
+            "EN-301-549",
+            "EN-9.4.1.2",
+            "RGAAv4",
+            "RGAA-7.1.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".quick-actions"
+              ],
+              "html": "<div class=\"quick-actions\" aria-label=\"Quick actions\"><a href=\"transfer.php\"><span>↗</span>Transfer Money</a><a href=\"statements.php\"><span>▤</span>Pay Bill</a><a href=\"statements.php\"><span>↓</span>View Statements</a><a href=\"portfolio.php\"><span>◒</span>Invest</a></div>",
+              "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute.",
+              "any": [],
+              "all": [],
+              "none": [
+                {
+                  "id": "aria-prohibited-attr",
+                  "data": {
+                    "role": null,
+                    "nodeName": "div",
+                    "messageKey": "noRoleSingular",
+                    "prohibited": [
+                      "aria-label"
+                    ]
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "aria-label attribute is not well supported on a div with no valid role attribute."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".balance-hero > div > span"
+              ],
+              "html": "<span>Total balance</span>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "10.3pt (13.76px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"balance-hero\"><div><span>Total balance</span><strong>$36,451.35</strong><p>Across 3 active accounts</p></div><a class=\"button button-light\" href=\"transfer.php\">Transfer money →</a></div>",
+                      "target": [
+                        ".balance-hero"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".balance-hero > div > strong"
+              ],
+              "html": "<strong>$36,451.35</strong>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "52.8pt (70.4px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"balance-hero\"><div><span>Total balance</span><strong>$36,451.35</strong><p>Across 3 active accounts</p></div><a class=\"button button-light\" href=\"transfer.php\">Transfer money →</a></div>",
+                      "target": [
+                        ".balance-hero"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".balance-hero > div > p"
+              ],
+              "html": "<p>Across 3 active accounts</p>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "10.3pt (13.76px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"balance-hero\"><div><span>Total balance</span><strong>$36,451.35</strong><p>Across 3 active accounts</p></div><a class=\"button button-light\" href=\"transfer.php\">Transfer money →</a></div>",
+                      "target": [
+                        ".balance-hero"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "a[href$=\"statements.php\"]:nth-child(2) > span"
+              ],
+              "html": "<span>▤</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "a[href$=\"statements.php\"]:nth-child(3) > span"
+              ],
+              "html": "<span>↓</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "a[href$=\"portfolio.php\"] > span"
+              ],
+              "html": "<span>◒</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".transaction-line:nth-child(1) > .credit.transaction-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<div class=\"transaction-icon credit\" aria-hidden=\"true\">↓</div>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".transaction-line:nth-child(2) > .debit.transaction-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<div class=\"transaction-icon debit\" aria-hidden=\"true\">↑</div>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".transaction-line:nth-child(3) > .debit.transaction-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<div class=\"transaction-icon debit\" aria-hidden=\"true\">↑</div>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".transaction-line:nth-child(4) > .credit.transaction-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<div class=\"transaction-icon credit\" aria-hidden=\"true\">↓</div>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".transaction-line:nth-child(5) > .debit.transaction-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<div class=\"transaction-icon debit\" aria-hidden=\"true\">↑</div>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 31,
+      "inapplicable": 58,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:28.659Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Accounts",
+      "route": "accounts.php",
+      "url": "http://127.0.0.1:3000/accounts.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 29,
+      "inapplicable": 60,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:29.855Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Transactions",
+      "route": "transactions.php",
+      "url": "http://127.0.0.1:3000/transactions.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                "label > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">⌕</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 43,
+      "inapplicable": 46,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:31.231Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Statements",
+      "route": "statements.php",
+      "url": "http://127.0.0.1:3000/statements.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".statement-row:nth-child(2) > div:nth-child(1) > .document-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<span class=\"document-icon\" aria-hidden=\"true\">▤</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".statement-row:nth-child(3) > div:nth-child(1) > .document-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<span class=\"document-icon\" aria-hidden=\"true\">▤</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".statement-row:nth-child(4) > div:nth-child(1) > .document-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<span class=\"document-icon\" aria-hidden=\"true\">▤</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 29,
+      "inapplicable": 60,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:32.375Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Transfer Money",
+      "route": "transfer.php",
+      "url": "http://127.0.0.1:3000/transfer.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 35,
+      "inapplicable": 54,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:33.866Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Investment Portfolio",
+      "route": "portfolio.php",
+      "url": "http://127.0.0.1:3000/portfolio.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "description": "Ensure ARIA attributes are not prohibited for an element's role",
+          "help": "Elements must only use permitted ARIA attributes",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
+          "tags": [
+            "cat.aria",
+            "wcag2a",
+            "wcag412",
+            "EN-301-549",
+            "EN-9.4.1.2",
+            "RGAAv4",
+            "RGAA-7.1.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".allocation-bars"
+              ],
+              "html": "<div class=\"allocation-bars\" aria-label=\"Illustrative portfolio allocation\"><span class=\"allocation-funds\">Funds</span><span class=\"allocation-stocks\">Stocks</span><span class=\"allocation-bonds\">Bonds</span></div>",
+              "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute.",
+              "any": [],
+              "all": [],
+              "none": [
+                {
+                  "id": "aria-prohibited-attr",
+                  "data": {
+                    "role": null,
+                    "nodeName": "div",
+                    "messageKey": "noRoleSingular",
+                    "prohibited": [
+                      "aria-label"
+                    ]
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "aria-label attribute is not well supported on a div with no valid role attribute."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".portfolio-value > div:nth-child(1) > span"
+              ],
+              "html": "<span>Portfolio value</span>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13.12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"portfolio-value\">",
+                      "target": [
+                        ".portfolio-value"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "div:nth-child(1) > strong"
+              ],
+              "html": "<strong>$12,681.20</strong>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "38.4pt (51.2px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"portfolio-value\">",
+                      "target": [
+                        ".portfolio-value"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".portfolio-value > div:nth-child(1) > p"
+              ],
+              "html": "<p><b>+8.2%</b> illustrative year-to-date performance</p>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13.12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"portfolio-value\">",
+                      "target": [
+                        ".portfolio-value"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "b"
+              ],
+              "html": "<b>+8.2%</b>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13.12px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"portfolio-value\">",
+                      "target": [
+                        ".portfolio-value"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".allocation-bonds"
+              ],
+              "html": "<span class=\"allocation-bonds\">Bonds</span>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.0pt (10.72px)",
+                    "fontWeight": "bold",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"allocation-bonds\">Bonds</span>",
+                      "target": [
+                        ".allocation-bonds"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 40,
+      "inapplicable": 49,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:35.098Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Profile & Settings",
+      "route": "profile.php",
+      "url": "http://127.0.0.1:3000/profile.php",
+      "viewport": "Desktop",
+      "dimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 37,
+      "inapplicable": 52,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 1440,
+        "windowHeight": 1000,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:36.257Z"
+    },
+    {
+      "group": "Public",
+      "pageName": "Home",
+      "route": "index.php",
+      "url": "http://127.0.0.1:3000/index.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "description": "Ensure ARIA attributes are not prohibited for an element's role",
+          "help": "Elements must only use permitted ARIA attributes",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
+          "tags": [
+            "cat.aria",
+            "wcag2a",
+            "wcag412",
+            "EN-301-549",
+            "EN-9.4.1.2",
+            "RGAAv4",
+            "RGAA-7.1.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".hero-visual"
+              ],
+              "html": "<div class=\"hero-visual\" aria-label=\"Illustration of a fictional DDB account balance\">",
+              "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute.",
+              "any": [],
+              "all": [],
+              "none": [
+                {
+                  "id": "aria-prohibited-attr",
+                  "data": {
+                    "role": null,
+                    "nodeName": "div",
+                    "messageKey": "noRoleSingular",
+                    "prohibited": [
+                      "aria-label"
+                    ]
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "aria-label attribute is not well supported on a div with no valid role attribute."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".hero-content > .eyebrow"
+              ],
+              "html": "<p class=\"eyebrow\">Demerara Digital Bank</p>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.4pt (11.2px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"hero-section\">",
+                      "target": [
+                        ".hero-section"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "h1"
+              ],
+              "html": "<h1>Bank. Invest.<br><em>Build Your Future.</em></h1>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "38.4pt (51.2px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"hero-section\">",
+                      "target": [
+                        ".hero-section"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "em"
+              ],
+              "html": "<em>Build Your Future.</em>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "38.4pt (51.2px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"hero-section\">",
+                      "target": [
+                        ".hero-section"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".hero-copy"
+              ],
+              "html": "<p class=\"hero-copy\">A more confident way to manage everyday money, invest with intent and shape the life you want — all in one clear digital experience.</p>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "13.2pt (17.6px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"hero-section\">",
+                      "target": [
+                        ".hero-section"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".button-row > .button[href$=\"register.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".button-outline"
+              ],
+              "html": "<a class=\"button button-outline\" href=\"personal-banking.php\">Explore banking</a>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"hero-section\">",
+                      "target": [
+                        ".hero-section"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".trust-line"
+              ],
+              "html": "<div class=\"trust-line\"><span class=\"trust-dot\" aria-hidden=\"true\"></span> Built for clarity. Secured for your journey.</div>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "10.2pt (13.6px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"hero-section\">",
+                      "target": [
+                        ".hero-section"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".card-top > span:nth-child(1)"
+              ],
+              "html": "<span>DDB / CHEQUING</span>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "7.9pt (10.56px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"debit-card\">\n            <div class=\"card-top\"><span>DDB / CHEQUING</span><span>•••</span></div>\n            <div class=\"card-chip\"></div>\n            <p class=\"card-balance\">$8,420.75</p>\n            <div class=\"card-bottom\"><span>DEMO MEMBER</span><span>4823</span></div>\n        </div>",
+                      "target": [
+                        ".debit-card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".card-balance"
+              ],
+              "html": "<p class=\"card-balance\">$8,420.75</p>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "19.2pt (25.6px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"debit-card\">\n            <div class=\"card-top\"><span>DDB / CHEQUING</span><span>•••</span></div>\n            <div class=\"card-chip\"></div>\n            <p class=\"card-balance\">$8,420.75</p>\n            <div class=\"card-bottom\"><span>DEMO MEMBER</span><span>4823</span></div>\n        </div>",
+                      "target": [
+                        ".debit-card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".card-bottom > span:nth-child(1)"
+              ],
+              "html": "<span>DEMO MEMBER</span>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "7.9pt (10.56px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"debit-card\">\n            <div class=\"card-top\"><span>DDB / CHEQUING</span><span>•••</span></div>\n            <div class=\"card-chip\"></div>\n            <p class=\"card-balance\">$8,420.75</p>\n            <div class=\"card-bottom\"><span>DEMO MEMBER</span><span>4823</span></div>\n        </div>",
+                      "target": [
+                        ".debit-card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".card-bottom > span:nth-child(2)"
+              ],
+              "html": "<span>4823</span>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "7.9pt (10.56px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"debit-card\">\n            <div class=\"card-top\"><span>DDB / CHEQUING</span><span>•••</span></div>\n            <div class=\"card-chip\"></div>\n            <p class=\"card-balance\">$8,420.75</p>\n            <div class=\"card-bottom\"><span>DEMO MEMBER</span><span>4823</span></div>\n        </div>",
+                      "target": [
+                        ".debit-card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".shield"
+              ],
+              "html": "<span class=\"shield\" aria-hidden=\"true\">✓</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "div:nth-child(2) > .feature-icon"
+              ],
+              "html": "<span class=\"feature-icon\">◇</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "div:nth-child(3) > .feature-icon"
+              ],
+              "html": "<span class=\"feature-icon\">⌁</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".inline-link[href$=\"personal-banking.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".personal-panel > a[href$=\"personal-banking.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "a[href$=\"business.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "a[href$=\"investments.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "a[href$=\"calculator.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".security-symbol"
+              ],
+              "html": "<div class=\"security-symbol\" aria-hidden=\"true\">⌾</div>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "#about > .button[href$=\"register.php\"] > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">→</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 31,
+      "inapplicable": 58,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:38.134Z"
+    },
+    {
+      "group": "Public",
+      "pageName": "Personal Banking",
+      "route": "personal-banking.php",
+      "url": "http://127.0.0.1:3000/personal-banking.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 33,
+      "inapplicable": 56,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:39.526Z"
+    },
+    {
+      "group": "Public",
+      "pageName": "Business Banking",
+      "route": "business.php",
+      "url": "http://127.0.0.1:3000/business.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 31,
+      "inapplicable": 58,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:40.598Z"
+    },
+    {
+      "group": "Public",
+      "pageName": "Investments",
+      "route": "investments.php",
+      "url": "http://127.0.0.1:3000/investments.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                "article:nth-child(2) > .round-icon"
+              ],
+              "html": "<span class=\"round-icon\">≋</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .round-icon"
+              ],
+              "html": "<span class=\"round-icon\">◒</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 31,
+      "inapplicable": 58,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:41.723Z"
+    },
+    {
+      "group": "Public",
+      "pageName": "Investment Calculator",
+      "route": "calculator.php",
+      "url": "http://127.0.0.1:3000/calculator.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 34,
+      "inapplicable": 55,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:42.913Z"
+    },
+    {
+      "group": "Public",
+      "pageName": "Registration",
+      "route": "register.php",
+      "url": "http://127.0.0.1:3000/register.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "impact": "critical",
+          "description": "Ensure all ARIA attributes have valid values",
+          "help": "ARIA attributes must conform to valid values",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
+          "tags": [
+            "cat.aria",
+            "wcag2a",
+            "wcag412",
+            "EN-301-549",
+            "EN-9.4.1.2",
+            "RGAAv4",
+            "RGAA-7.1.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                "#first_name"
+              ],
+              "html": "<input id=\"first_name\" name=\"first_name\" autocomplete=\"given-name\" value=\"\" required=\"\" aria-describedby=\"first_name-error\">",
+              "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-describedby=\"first_name-error\"",
+              "any": [],
+              "all": [
+                {
+                  "id": "aria-valid-attr-value",
+                  "data": {
+                    "messageKey": "noId",
+                    "needsReview": "aria-describedby=\"first_name-error\""
+                  },
+                  "relatedNodes": [],
+                  "impact": "critical",
+                  "message": "ARIA attribute element ID does not exist on the page: aria-describedby=\"first_name-error\""
+                }
+              ],
+              "none": []
+            },
+            {
+              "target": [
+                "#last_name"
+              ],
+              "html": "<input id=\"last_name\" name=\"last_name\" autocomplete=\"family-name\" value=\"\" required=\"\" aria-describedby=\"last_name-error\">",
+              "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-describedby=\"last_name-error\"",
+              "any": [],
+              "all": [
+                {
+                  "id": "aria-valid-attr-value",
+                  "data": {
+                    "messageKey": "noId",
+                    "needsReview": "aria-describedby=\"last_name-error\""
+                  },
+                  "relatedNodes": [],
+                  "impact": "critical",
+                  "message": "ARIA attribute element ID does not exist on the page: aria-describedby=\"last_name-error\""
+                }
+              ],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 39,
+      "inapplicable": 50,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:44.078Z"
+    },
+    {
+      "group": "Public",
+      "pageName": "Login",
+      "route": "login.php",
+      "url": "http://127.0.0.1:3000/login.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 35,
+      "inapplicable": 54,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:45.117Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Dashboard",
+      "route": "dashboard.php",
+      "url": "http://127.0.0.1:3000/dashboard.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "description": "Ensure ARIA attributes are not prohibited for an element's role",
+          "help": "Elements must only use permitted ARIA attributes",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
+          "tags": [
+            "cat.aria",
+            "wcag2a",
+            "wcag412",
+            "EN-301-549",
+            "EN-9.4.1.2",
+            "RGAAv4",
+            "RGAA-7.1.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".quick-actions"
+              ],
+              "html": "<div class=\"quick-actions\" aria-label=\"Quick actions\"><a href=\"transfer.php\"><span>↗</span>Transfer Money</a><a href=\"statements.php\"><span>▤</span>Pay Bill</a><a href=\"statements.php\"><span>↓</span>View Statements</a><a href=\"portfolio.php\"><span>◒</span>Invest</a></div>",
+              "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute.",
+              "any": [],
+              "all": [],
+              "none": [
+                {
+                  "id": "aria-prohibited-attr",
+                  "data": {
+                    "role": null,
+                    "nodeName": "div",
+                    "messageKey": "noRoleSingular",
+                    "prohibited": [
+                      "aria-label"
+                    ]
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "aria-label attribute is not well supported on a div with no valid role attribute."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".balance-hero > div > span"
+              ],
+              "html": "<span>Total balance</span>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "10.3pt (13.76px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"balance-hero\"><div><span>Total balance</span><strong>$36,451.35</strong><p>Across 3 active accounts</p></div><a class=\"button button-light\" href=\"transfer.php\">Transfer money →</a></div>",
+                      "target": [
+                        ".balance-hero"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".balance-hero > div > strong"
+              ],
+              "html": "<strong>$36,451.35</strong>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "30.0pt (40px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"balance-hero\"><div><span>Total balance</span><strong>$36,451.35</strong><p>Across 3 active accounts</p></div><a class=\"button button-light\" href=\"transfer.php\">Transfer money →</a></div>",
+                      "target": [
+                        ".balance-hero"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".balance-hero > div > p"
+              ],
+              "html": "<p>Across 3 active accounts</p>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "10.3pt (13.76px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"balance-hero\"><div><span>Total balance</span><strong>$36,451.35</strong><p>Across 3 active accounts</p></div><a class=\"button button-light\" href=\"transfer.php\">Transfer money →</a></div>",
+                      "target": [
+                        ".balance-hero"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "a[href$=\"statements.php\"]:nth-child(2) > span"
+              ],
+              "html": "<span>▤</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "a[href$=\"statements.php\"]:nth-child(3) > span"
+              ],
+              "html": "<span>↓</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "a[href$=\"portfolio.php\"] > span"
+              ],
+              "html": "<span>◒</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".transaction-line:nth-child(1) > .credit.transaction-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<div class=\"transaction-icon credit\" aria-hidden=\"true\">↓</div>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".transaction-line:nth-child(2) > .debit.transaction-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<div class=\"transaction-icon debit\" aria-hidden=\"true\">↑</div>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".transaction-line:nth-child(3) > .debit.transaction-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<div class=\"transaction-icon debit\" aria-hidden=\"true\">↑</div>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".transaction-line:nth-child(4) > .credit.transaction-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<div class=\"transaction-icon credit\" aria-hidden=\"true\">↓</div>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".transaction-line:nth-child(5) > .debit.transaction-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<div class=\"transaction-icon debit\" aria-hidden=\"true\">↑</div>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 31,
+      "inapplicable": 58,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:48.058Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Accounts",
+      "route": "accounts.php",
+      "url": "http://127.0.0.1:3000/accounts.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 31,
+      "inapplicable": 58,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:49.171Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Transactions",
+      "route": "transactions.php",
+      "url": "http://127.0.0.1:3000/transactions.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                "label > span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">⌕</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 44,
+      "inapplicable": 45,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:50.384Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Statements",
+      "route": "statements.php",
+      "url": "http://127.0.0.1:3000/statements.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".statement-row:nth-child(2) > div:nth-child(1) > .document-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<span class=\"document-icon\" aria-hidden=\"true\">▤</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".statement-row:nth-child(3) > div:nth-child(1) > .document-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<span class=\"document-icon\" aria-hidden=\"true\">▤</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".statement-row:nth-child(4) > div:nth-child(1) > .document-icon[aria-hidden=\"true\"]"
+              ],
+              "html": "<span class=\"document-icon\" aria-hidden=\"true\">▤</span>",
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 31,
+      "inapplicable": 58,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:51.445Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Transfer Money",
+      "route": "transfer.php",
+      "url": "http://127.0.0.1:3000/transfer.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 35,
+      "inapplicable": 54,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:52.525Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Investment Portfolio",
+      "route": "portfolio.php",
+      "url": "http://127.0.0.1:3000/portfolio.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "description": "Ensure ARIA attributes are not prohibited for an element's role",
+          "help": "Elements must only use permitted ARIA attributes",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
+          "tags": [
+            "cat.aria",
+            "wcag2a",
+            "wcag412",
+            "EN-301-549",
+            "EN-9.4.1.2",
+            "RGAAv4",
+            "RGAA-7.1.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".allocation-bars"
+              ],
+              "html": "<div class=\"allocation-bars\" aria-label=\"Illustrative portfolio allocation\"><span class=\"allocation-funds\">Funds</span><span class=\"allocation-stocks\">Stocks</span><span class=\"allocation-bonds\">Bonds</span></div>",
+              "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute.",
+              "any": [],
+              "all": [],
+              "none": [
+                {
+                  "id": "aria-prohibited-attr",
+                  "data": {
+                    "role": null,
+                    "nodeName": "div",
+                    "messageKey": "noRoleSingular",
+                    "prohibited": [
+                      "aria-label"
+                    ]
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "aria-label attribute is not well supported on a div with no valid role attribute."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                ".portfolio-value > div:nth-child(1) > span"
+              ],
+              "html": "<span>Portfolio value</span>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13.12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"portfolio-value\">",
+                      "target": [
+                        ".portfolio-value"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "div:nth-child(1) > strong"
+              ],
+              "html": "<strong>$12,681.20</strong>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "38.4pt (51.2px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "3:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"portfolio-value\">",
+                      "target": [
+                        ".portfolio-value"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".portfolio-value > div:nth-child(1) > p"
+              ],
+              "html": "<p><b>+8.2%</b> illustrative year-to-date performance</p>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13.12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"portfolio-value\">",
+                      "target": [
+                        ".portfolio-value"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                "b"
+              ],
+              "html": "<b>+8.2%</b>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13.12px)",
+                    "fontWeight": "bold",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"portfolio-value\">",
+                      "target": [
+                        ".portfolio-value"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": []
+            },
+            {
+              "target": [
+                ".allocation-bonds"
+              ],
+              "html": "<span class=\"allocation-bonds\">Bonds</span>",
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.0pt (10.72px)",
+                    "fontWeight": "bold",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"allocation-bonds\">Bonds</span>",
+                      "target": [
+                        ".allocation-bonds"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": []
+            }
+          ]
+        }
+      ],
+      "passes": 41,
+      "inapplicable": 48,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:53.741Z"
+    },
+    {
+      "group": "Portal",
+      "pageName": "Profile & Settings",
+      "route": "profile.php",
+      "url": "http://127.0.0.1:3000/profile.php",
+      "viewport": "Mobile",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 37,
+      "inapplicable": 52,
+      "testEngine": {
+        "name": "axe-core",
+        "version": "4.13.0"
+      },
+      "testRunner": {
+        "name": "axe"
+      },
+      "testEnvironment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "windowWidth": 390,
+        "windowHeight": 844,
+        "orientationAngle": 0,
+        "orientationType": "landscape-primary"
+      },
+      "timestamp": "2026-10-04T20:48:54.942Z"
+    }
+  ]
+}
